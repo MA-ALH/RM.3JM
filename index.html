@@ -74,11 +74,13 @@ footer{margin-top:30px;border-top:1px solid var(--line);text-align:center;color:
 <div class="tabs" role="tablist" aria-label="أقسام المتجر">
   <button class="tab active" type="button" data-target="featured">السيارات المميزة</button>
   <button class="tab" type="button" data-target="cars">السيارات</button>
+  <button class="tab" type="button" data-target="aircrafts">الطيارات</button>
   <button class="tab" type="button" data-target="houses">البيوت</button>
   <button class="tab" type="button" data-target="bundles">الحزم والأسعار</button>
 </div>
 <section id="featured" class="panel active"><div class="head"><h2>السيارات المميزة</h2><span>Featured Vehicles</span></div><div class="grid" id="featuredGrid"></div></section>
 <section id="cars" class="panel"><div class="head"><h2>السيارات</h2><span>Vehicles</span></div><div class="grid" id="carsGrid"></div></section>
+<section id="aircrafts" class="panel"><div class="head"><h2>قسم الطيارات</h2><span>Aircraft</span></div><div class="grid" id="aircraftsGrid"></div></section>
 <section id="houses" class="panel"><div class="head"><h2>البيوت</h2><span>Houses</span></div><div class="grid" id="housesGrid"></div></section>
 <section id="bundles" class="panel"><div class="head"><h2>الحزم والأسعار</h2><span>Bundles & Pricing</span></div><div class="grid" id="bundlesGrid"></div></section>
 <section id="payment"><div class="head"><h2>الدفع</h2><span>Payment</span></div>
@@ -131,7 +133,7 @@ document.body.classList.add('modal-open');
 document.getElementById('agreeRules').addEventListener('click', () => { rulesOverlay.style.display = 'none'; document.body.classList.remove('modal-open'); });
 function card(p){return `<article class="card"><div class="pic"><img src="${p.image}" alt="${p.name}" onerror="this.style.display='none';this.parentElement.innerHTML='<span>أضف الصورة هنا</span>'"></div><div class="cardInfo"><h3>${p.name}</h3><div class="meta"><span class="price">${p.price}</span><button class="buy" type="button" data-name="${p.name}" data-price="${p.price}" data-image="${p.image}" data-desc="${p.description}">أضف للسلة</button></div><p class="desc">${p.description}</p></div></article>`}
 function render(id,arr){document.getElementById(id).innerHTML=arr.map(card).join("")}
-render("featuredGrid",STORE.featured);render("carsGrid",STORE.cars);render("housesGrid",STORE.houses);render("bundlesGrid",STORE.bundles);
+render("featuredGrid",STORE.featured);render("carsGrid",STORE.cars);render("aircraftsGrid",STORE.aircrafts);render("housesGrid",STORE.houses);render("bundlesGrid",STORE.bundles);
 if(STORE.paypalUrl){const b=document.getElementById("payBtn"); b.href=STORE.paypalUrl;b.target="_blank";b.rel="noopener";b.onclick=null;document.getElementById("paymentText").textContent="اضغط للدفع عبر PayPal";}
 const buyButtons=document.querySelectorAll('.buy');
 buyButtons.forEach(btn => btn.addEventListener('click',()=>{const product={name:btn.dataset.name,price:btn.dataset.price,image:btn.dataset.image,description:btn.dataset.desc};addToCart(product);}));

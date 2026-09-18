@@ -13,6 +13,12 @@ const STORE = {
     { name: "CAR NAME #06", price: "0 ر.س", image: "images/car6.jpg", description: "موديل • فئة • تفاصيل" }
   ],
 
+  aircrafts: [
+    { name: "طائرة #01", price: "150 ر.س", image: "images/car1.jpg", description: "طائرة عائلية • سرعة عالية • تصميم أنيق" },
+    { name: "طائرة #02", price: "0 ر.س", image: "images/car2.jpg", description: "طائرة رياضية • تجهيزات متقدمة • جاهزة للرحلات" },
+    { name: "طائرة #03", price: "0 ر.س", image: "images/car3.jpg", description: "طائرة خاصة • داخلية فاخرة • تجربة مميزة" }
+  ],
+
   houses: [
     { name: "HOUSE NAME #01", price: "130 ر.س", image: "images/house1.jpg", description: "اختار البيت فأي مكان يعجبك" },
     { name: "HOUSE NAME #02", price: "0 ر.س", image: "images/house2.jpg", description: "وصف البيت ومميزاته" },
