@@ -2,7 +2,6 @@ const STORE = {
   paypalUrl: "https://www.paypal.com/ncp/payment/XVW2CC295GCMW", // رابط PayPal
 
   featured: [
-    { name: "tcharger", price: "75 ر.س", image: "images/car1.jpg", description: "تشيل 4 و سرعتها 235" },
     { name: "CAR NAME #02", price: "0 ر.س", image: "images/car2.jpg", description: "وصف السيارة هنا" },
     { name: "CAR NAME #03", price: "0 ر.س", image: "images/car3.jpg", description: "وصف السيارة هنا" }
   ],
@@ -11,12 +10,6 @@ const STORE = {
     { name: "CAR NAME #04", price: "0 ر.س", image: "images/car4.jpg", description: "موديل • فئة • تفاصيل" },
     { name: "CAR NAME #05", price: "0 ر.س", image: "images/car5.jpg", description: "موديل • فئة • تفاصيل" },
     { name: "CAR NAME #06", price: "0 ر.س", image: "images/car6.jpg", description: "موديل • فئة • تفاصيل" }
-  ],
-
-  aircrafts: [
-    { name: "طائرة #01", price: "150 ر.س", image: "images/car1.jpg", description: "طائرة عائلية • سرعة عالية • تصميم أنيق" },
-    { name: "طائرة #02", price: "0 ر.س", image: "images/car2.jpg", description: "طائرة رياضية • تجهيزات متقدمة • جاهزة للرحلات" },
-    { name: "طائرة #03", price: "0 ر.س", image: "images/car3.jpg", description: "طائرة خاصة • داخلية فاخرة • تجربة مميزة" }
   ],
 
   houses: [
